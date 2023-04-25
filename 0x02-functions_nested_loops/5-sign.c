@@ -9,7 +9,7 @@
 	 * -1 and prints - if n is less than zero
 	 */
 	int print_sign(int n)
-	{
+{
 		if (n > 0)
 		{
 			_putchar('+');
@@ -23,4 +23,4 @@
 			_putchar('-');
 		}
 			return (-1);
-	}
+}
