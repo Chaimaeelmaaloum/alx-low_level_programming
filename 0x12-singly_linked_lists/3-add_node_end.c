@@ -3,40 +3,40 @@
 #include <stdio.h>
 #include "lists.h"
 
-/**@head: two pointer to the list_t list
+/**@h: two pointer to the list_t list
  * a_n_e : i will add a new node in the end of the linked list
  * @str: put with string in the new node
  *
  * Return: address of the new element, or NULL if it failed
  */
 
-list_t *a_n_e(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new;
-	list_t *temp = *head;
+	list_t *n;
+	list_t *temp = *h;
 	unsigned int len = 0;
 
 	while (str[len])
 		len++;
 
-	new = malloc(sizeof(list_t));
-	if (!new)
+	n = malloc(sizeof(list_t));
+	if (!n)
 		return (NULL);
 
-	new->str = strdup(str);
-	new->len = len;
-	new->next = NULL;
+	n->str = strdup(str);
+	n->len = len;
+	n->next = NULL;
 
-	if (*head == NULL)
+	if (*h == NULL)
 	{
-		*head = new;
-		return (new);
+		*h = n;
+		return (n);
 	}
 
 	while (temp->next)
 		temp = temp->next;
 
-	temp->next = new;
+	temp->next = n;
 
-	return (new);
+	return (n);
 }
