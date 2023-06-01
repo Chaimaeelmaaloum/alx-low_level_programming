@@ -3,7 +3,7 @@
 #include <string.h>
 #include "lists.h"
 
-void first(void)_constructor_((attribute)); 
+void first(void)__attribute__ ((constructor)); 
 
 /**
  * first  print the function before the main
