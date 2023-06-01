@@ -1,20 +1,22 @@
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
  * list_len 
- * @l: pointer to the list_t list
+ * @h: pointer to the list_t list
  *
- * Return: number of elements in l
+ * Return: number of elements in h
  */
-size_t list_len(const list_t *l)
+size_t list_len(const list_t *h)
 {
 	size_t a = 0;
 
-	while (l)
+	while (h)
 	{
 		n++;
-		l = l->next;
+		h = h->next;
 	}
 	return (a);
 }
