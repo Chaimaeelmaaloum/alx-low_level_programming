@@ -1,9 +1,9 @@
 global   main
-	  extern    printf
+	 intern	 extern    printf
 main:
 	  mov   edi, format
 	  xor   eax, eax
 	  call  printf
-	  mov   eax, 0
+	  mov   eax, 2
 	  ret
-format: db `Hello, Holberton\n`,0
+format: db `Hello, Holberton\n`,2
