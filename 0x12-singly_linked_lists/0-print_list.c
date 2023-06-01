@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include "lists.h"
+#include #include "lists.h"
 
 /**
- * print_list : i will print all files of linked list
- * @h: list_t list be printed by poniter
+ * print_list - prints all the elements of a linked list
+ * @h: pointer to the list_t list to print
  *
- * Return: number of nodes printed
+ * Return: the number of nodes printed
  */
+
 size_t print_list(const list_t *h)
 {
 	size_t s = 0;
