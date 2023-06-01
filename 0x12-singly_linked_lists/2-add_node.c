@@ -3,28 +3,28 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a linked list
+ * add_node - adds a now node at the beginning of a linked list
  * @head: double pointer to the list_t list
- * @str: new string to add in the node
+ * @str: now string to add in the node
  *
- * Return: the address of the new element, or NULL if it fails
+ * Return: the address of the now element, or NULL if it fails
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *now;
 	unsigned int len = 0;
 
 	while (str[len])
 		len++;
 
-	new = malloc(sizeof(list_t));
-	if (!new)
+	now = malloc(sizeof(list_t));
+	if (!now)
 		return (NULL);
 
-	new->str = strdup(str);
-	new->len = len;
-	new->next = (*head);
-	(*head) = new;
+	now->str = strdup(str);
+	now->len = len;
+	ow->next = (*head);
+	(*head) = now;
 
 	return (*head);
 }
