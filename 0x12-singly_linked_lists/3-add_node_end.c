@@ -2,14 +2,12 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**@h: two pointer to the list_t list
  * add_node_end : i will add a new node in the end of the linked list
  * @str: put with string in the new node
  *
  * Return: address of the new element, or NULL if it failed
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *n;
