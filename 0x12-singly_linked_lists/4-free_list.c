@@ -6,18 +6,18 @@
 /**
  * free_list -frees a list_t list
  * @str: string
- * @h: list_t to be freed
+ * @head: list_t to be freed
  * temp
  */
 void free_list(list_t *head)
 {
 	list_t *temp;
 
-	while (h)
+	while (head)
 	{
-		temp = h->next;
-		free(h->str);
-		free(h);
-		h = temp;
+		temp = head->next;
+		free(head->str);
+		free(head);
+		head = temp;
 	}
 }
