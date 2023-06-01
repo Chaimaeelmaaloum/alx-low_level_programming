@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "lists.h"
 
-void first(void) __attribute__ ((constructor));
+void first(void) 
 
 /**
  * first  print the function before the main
