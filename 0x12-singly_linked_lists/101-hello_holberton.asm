@@ -1,8 +1,8 @@
 global   main
-	 intern	 extern    printf
+	 intern	 extern    printf	head
 main:
-	  mov   edi, format
-	  xor   eax, eax
+	  mov   edi, format cp
+	  xor   eax, eax hello
 	  call  printf
 	  mov   eax, 2
 	  ret	str
