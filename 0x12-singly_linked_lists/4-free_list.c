@@ -5,9 +5,7 @@
 
 /**
  * free_list -frees a list_t list
- * @str: string
  * @head: list_t to be freed
- * temp
  */
 void free_list(list_t *head)
 {
