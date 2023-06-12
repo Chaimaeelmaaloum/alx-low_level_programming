@@ -34,11 +34,11 @@ char *create_bffr(char *file)
  */
 void close_file(int fd)
 {
-	int c;
+	int q;
 
-	c = close(fd);
+	q = close(fd);
 
-	if (c == -1)
+	if (q == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
