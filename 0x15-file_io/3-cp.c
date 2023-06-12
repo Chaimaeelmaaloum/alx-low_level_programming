@@ -6,10 +6,10 @@ char *create_bffr(char *file);
 void close_file(int fd);
 
 /**
- * create_bffr - Allocates 1024 bytes for bffr
- * @file: toring chars is the name of the file bffr 
+ * create_bffr - Allocates 1024 bytes for buffer
+ * @file: toring chars is the name of the file buffer
  *
- * Return: A pointer to the newly-allocated bffr.
+ * Return: A pointer to the newly-allocated buffer.
  */
 
 char *create_bffr(char *file)
@@ -29,7 +29,7 @@ char *create_bffr(char *file)
 }
 
 /**
- * close_file - Close the files descriptor
+ * close_file - Close the files descriptor.
  * @fd: The file descriptor be closed.
  */
 void close_file(int fd)
