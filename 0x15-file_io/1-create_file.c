@@ -3,9 +3,9 @@
 #include "main.h"
 
 /**
- * crate_file - for create files.
- * @filename: the pointer to the name of file who want to create
- * @text_file: pointer to string to write the file;
+ * create_file - create a files.
+ * @filename: pointer to the name of file who want to create
+ * @text_content : the description of text
  *
  * Return: if the function fails - -1.
  *	otherwise -1.
