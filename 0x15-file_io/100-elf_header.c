@@ -19,9 +19,9 @@ void close_elf(int elf);
 
 /**
  * check_elf - Check if the file is ELF files.
- * @e_ident: A pointer to an array containing the ELF magic numbers.
- *
  * Description: If the file is not an ELF file - exit code 98.
+ *
+ * @e_ident: A pointer to an array containing the ELF magic numbers.
  */
 void check_elf(unsigned char *e_ident)
 {
@@ -273,10 +273,10 @@ void close_elf(int elf)
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-	int o, r;
+	int oo, i;
 
-	o = open(argv[1], O_RDONLY);
-	if (o == -1)
+	oo = open(argv[1], O_RDONLY);
+	if (oo == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
@@ -284,15 +284,15 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
-		close_elf(o);
+		close_elf(oo);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	r = read(o, header, sizeof(Elf64_Ehdr));
-	if (r == -1)
+	i = read(oo, header, sizeof(Elf64_Ehdr));
+	if (i == -1)
 	{
 		free(header);
-		close_elf(o);
+		close_elf(oo);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
@@ -309,6 +309,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
-	close_elf(o);
+	close_elf(oo);
 	return (0);
 }
