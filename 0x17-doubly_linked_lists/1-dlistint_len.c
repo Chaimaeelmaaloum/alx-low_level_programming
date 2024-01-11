@@ -7,7 +7,7 @@
  * @h: head of the list
  * return: the number of nodes
  */
-size_t dlistint_len(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h);
 {
 	int count;
 
@@ -19,7 +19,7 @@ size_t dlistint_len(const dlistint_t *h)
 	while (h->prev != NULL)
 		h = h->prev;
 
-	while (h !=NULL)
+	while (h != NULL)
 	{
 		count++;
 		h = h->next;
