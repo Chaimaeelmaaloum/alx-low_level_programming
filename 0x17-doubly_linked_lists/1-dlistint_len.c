@@ -5,9 +5,9 @@
  * a double linked list
  *
  * @h: head of the list
- * return: the number of nodes
+ * return: the number of nodes in the list
  */
-size_t dlistint_len(const dlistint_t *h);
+size_t dlistint_len(const dlistint_t *h)
 {
 	int count;
 
